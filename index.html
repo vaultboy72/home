@@ -3,7 +3,18 @@
 <title>TPEMOVIESREMADE WEBSITE</title>
 <h1>TPEMovies Remade Home Page</h1>
 <h3><i> The Website For TPEMoviesRemade on GitHub!</i></h3>
-<p> Welcome! Login here: </p> 
+  <h5 id="welcome-message">Welcome!</h5>
+  <script>
+    // Get the URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const username = params.get("username");
+
+    // Update the page if a username is found
+    if (username) {
+      document.getElementById("welcome-message").textContent = `Welcome, ${username}!`;
+    }
+  </script>
+<p>Login here: </p> 
 <a href=login.html>Login</a>
   <h3>Videos:</h3>
   <iframe width="720" height="480" src="https://www.youtube.com/embed/WWqWa1UZxh8" title="epic rivals footage" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
